@@ -83,3 +83,44 @@ For example:
 ^>v< now delivers presents to 3 houses, and Santa and Robo-Santa end up back where they started.
 ^v^v^v^v^v now delivers presents to 11 houses, with Santa going one direction and Robo-Santa going the other.
 """
+
+with open('input.txt', 'r') as input:
+    houses = []
+    x = 0
+    y = 0
+    start = [x,y]
+    houses.append(start)
+    s_position = [x,y]
+    r_position = [x,y]
+    cline = input.readline().strip()
+    while cline:
+        for i, char in enumerate(cline):
+            if i % 2 == 0:
+                if char == '^':
+                    s_position[1] += 1
+                    houses.append(s_position.copy())
+                if char == 'v':
+                    s_position[1] -= 1
+                    houses.append(s_position.copy())
+                if char == '>':
+                    s_position[0] += 1
+                    houses.append(s_position.copy())
+                if char == '<':
+                    s_position[0] -= 1
+                    houses.append(s_position.copy())
+            else:
+                if char == '^':
+                    r_position[1] += 1
+                    houses.append(r_position.copy())
+                if char == 'v':
+                    r_position[1] -= 1
+                    houses.append(r_position.copy())
+                if char == '>':
+                    r_position[0] += 1
+                    houses.append(r_position.copy())
+                if char == '<':
+                    r_position[0] -= 1
+                    houses.append(r_position.copy())
+        cline = input.readline().strip()
+    houses = list(set(map(tuple, houses)))
+    print(f'The number of houses that receive at least one present is {len(houses)}')
