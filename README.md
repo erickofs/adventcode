@@ -6,8 +6,6 @@ Welcome to the Advent of Code Puzzles Repository! This repository is dedicated t
 
 - [About Advent of Code](#about-advent-of-code)
 - [Repository Structure](#repository-structure)
-- [How to Contribute](#how-to-contribute)
-- [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
 ## About Advent of Code
