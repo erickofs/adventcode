@@ -84,6 +84,7 @@ For example:
 ^v^v^v^v^v now delivers presents to 11 houses, with Santa going one direction and Robo-Santa going the other.
 """
 
+<<<<<<< Updated upstream
 with open('input.txt', 'r') as input:
     houses = []
     x = 0
@@ -124,3 +125,5 @@ with open('input.txt', 'r') as input:
         cline = input.readline().strip()
     houses = list(set(map(tuple, houses)))
     print(f'The number of houses that receive at least one present is {len(houses)}')
+=======
+>>>>>>> Stashed changes
